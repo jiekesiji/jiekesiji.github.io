@@ -4,7 +4,10 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:add": "git add .",
-    "docs:deploy": " scp -r ./docs/.vitepress/dist/ root@162.14.113.88:/home/jie/nginx/resource/project/blog/"
+    "docs:commit": "git commit -m '自动提交' ",
+    "docs:push": "git push",
+    "docs:copy": " scp -r ./docs/.vitepress/dist/ root@162.14.113.88:/home/jie/nginx/resource/project/blog/",
+    "docs:deploy": "npm-run-all docs:add docs:commit docs:push docs:build docs:copy"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
