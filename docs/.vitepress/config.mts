@@ -10,15 +10,18 @@ export default defineConfig({
       { text: 'Home', link: '/' }
     ],
 
-    sidebar: [
-
-      {
-        text: 'linux',
-        items: [
-          { text: '查询类', link: '/linux/index' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/linux/': [
+        {
+          text: 'linux常用命令',
+          collapsed: false,
+          items: [
+            { text: '查询类', link: '/linux/index' },
+            { text: '权限类', link: '/linux/permission' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/jiekesiji' }
